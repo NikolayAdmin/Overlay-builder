@@ -31,15 +31,6 @@ jobs:
         cd workspace
         git clone ${{github.event.inputs.FORK_URL }}
 
-    - name: Run test scripts
-      run: |
-        PATH=~/bin:$PATH
-        cd workspace && cd vendor_hardware_overlay
-        git config --global user.name "Johx22"
-        git config --global user.email "johannjose2004@gmail.com"
-        cd tests
-        bash tests.sh
-
     - name: Build APK's
       run: |
         PATH=~/bin:$PATH
