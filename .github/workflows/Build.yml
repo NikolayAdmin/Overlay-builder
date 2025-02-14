@@ -1,4 +1,4 @@
-name: Overlay
+.name: Overlay
 
 on:
   workflow_dispatch:
@@ -34,7 +34,7 @@ jobs:
     - name: Build APK's
       run: |
         PATH=~/bin:$PATH
-        cd workspace && cd vendor_hardware_overlay && cd build
+        cd build
         bash build.sh
 
     - name: Upload APK
